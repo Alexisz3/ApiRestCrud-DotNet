@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("ProductsDb"));
+    options.UseSqlite("Data Source=productos.db"));
 
 var app = builder.Build();
 
